@@ -5,8 +5,10 @@ WITH state_yearly AS (
         COUNT(*) AS deal_count
     FROM issuers i 
     JOIN submissions s ON i.accession_number = s.accession_number
-    WHERE s.filing_year BETWEEN 2019 AND 2025
+    JOIN offerings o ON s.accession_number = o.accession_number
+    WHERE s.filing_year BETWEEN 2019 AND 2025 
     AND i.stateorcountrydescription IS NOT NULL
+    AND o.industrygrouptype != 'Pooled Investment Fund'
     GROUP BY i.stateorcountrydescription, s.filing_year
 ),
 state_summary AS (
@@ -26,5 +28,5 @@ SELECT
     ROUND((deals_2025 - deals_2019) * 100.0 / NULLIF(deals_2019, 0), 1) AS growth_pct_2019_to_2025,
     RANK() OVER (ORDER BY (deals_2025 - deals_2019) * 100.0 / NULLIF(deals_2019, 0) DESC) AS growth_rank
 FROM state_summary
-WHERE deals_2019 >= 50
+WHERE deals_2019 >= 10
 ORDER BY growth_rank;

@@ -1,0 +1,120 @@
+industrygrouptype,filing_year,median_deal_size_m,prev_year_median,yoy_change
+Biotechnology,2019,2.16,null,null
+Biotechnology,2020,2.85,2.16,0.69
+Biotechnology,2021,4.16,2.85,1.31
+Biotechnology,2022,3.04,4.16,-1.12
+Biotechnology,2023,2.30,3.04,-0.74
+Biotechnology,2024,3.29,2.30,0.99
+Biotechnology,2025,2.66,3.29,-0.63
+Business Services,2019,0.32,null,null
+Business Services,2020,0.33,0.32,0.01
+Business Services,2021,0.36,0.33,0.03
+Business Services,2022,0.25,0.36,-0.11
+Business Services,2023,0.49,0.25,0.24
+Business Services,2024,0.32,0.49,-0.17
+Business Services,2025,0.40,0.32,0.08
+Commercial,2019,1.02,null,null
+Commercial,2020,0.93,1.02,-0.09
+Commercial,2021,1.11,0.93,0.18
+Commercial,2022,1.01,1.11,-0.10
+Commercial,2023,0.68,1.01,-0.33
+Commercial,2024,0.60,0.68,-0.08
+Commercial,2025,0.75,0.60,0.15
+Investing,2019,0.88,null,null
+Investing,2020,0.50,0.88,-0.38
+Investing,2021,0.85,0.50,0.35
+Investing,2022,1.15,0.85,0.30
+Investing,2023,0.58,1.15,-0.57
+Investing,2024,0.77,0.58,0.19
+Investing,2025,0.50,0.77,-0.27
+Manufacturing,2019,0.53,null,null
+Manufacturing,2020,0.50,0.53,-0.03
+Manufacturing,2021,0.96,0.50,0.46
+Manufacturing,2022,0.70,0.96,-0.26
+Manufacturing,2023,0.53,0.70,-0.17
+Manufacturing,2024,0.75,0.53,0.22
+Manufacturing,2025,0.86,0.75,0.11
+Oil and Gas,2019,0.13,null,null
+Oil and Gas,2020,0.13,0.13,0.00
+Oil and Gas,2021,0.24,0.13,0.11
+Oil and Gas,2022,0.20,0.24,-0.04
+Oil and Gas,2023,0.05,0.20,-0.15
+Oil and Gas,2024,0.08,0.05,0.03
+Oil and Gas,2025,0.13,0.08,0.05
+Other,2019,0.55,null,null
+Other,2020,0.56,0.55,0.01
+Other,2021,1.00,0.56,0.44
+Other,2022,0.65,1.00,-0.35
+Other,2023,0.46,0.65,-0.19
+Other,2024,0.50,0.46,0.04
+Other,2025,0.52,0.50,0.02
+Other Banking and Financial Services,2019,0.65,null,null
+Other Banking and Financial Services,2020,1.30,0.65,0.65
+Other Banking and Financial Services,2021,2.00,1.30,0.70
+Other Banking and Financial Services,2022,0.85,2.00,-1.15
+Other Banking and Financial Services,2023,0.20,0.85,-0.65
+Other Banking and Financial Services,2024,0.35,0.20,0.15
+Other Banking and Financial Services,2025,0.48,0.35,0.13
+Other Energy,2019,0.50,null,null
+Other Energy,2020,0.48,0.50,-0.02
+Other Energy,2021,0.96,0.48,0.48
+Other Energy,2022,0.89,0.96,-0.07
+Other Energy,2023,1.00,0.89,0.11
+Other Energy,2024,1.12,1.00,0.12
+Other Energy,2025,1.77,1.12,0.65
+Other Health Care,2019,0.87,null,null
+Other Health Care,2020,1.00,0.87,0.13
+Other Health Care,2021,1.23,1.00,0.23
+Other Health Care,2022,1.00,1.23,-0.23
+Other Health Care,2023,1.04,1.00,0.04
+Other Health Care,2024,1.20,1.04,0.16
+Other Health Care,2025,1.05,1.20,-0.15
+Other Real Estate,2019,1.00,null,null
+Other Real Estate,2020,0.82,1.00,-0.18
+Other Real Estate,2021,1.41,0.82,0.59
+Other Real Estate,2022,1.35,1.41,-0.06
+Other Real Estate,2023,0.88,1.35,-0.47
+Other Real Estate,2024,0.79,0.88,-0.09
+Other Real Estate,2025,0.84,0.79,0.05
+Other Technology,2019,1.17,null,null
+Other Technology,2020,1.46,1.17,0.29
+Other Technology,2021,2.50,1.46,1.04
+Other Technology,2022,2.27,2.50,-0.23
+Other Technology,2023,1.75,2.27,-0.52
+Other Technology,2024,1.89,1.75,0.14
+Other Technology,2025,1.90,1.89,0.01
+Pharmaceuticals,2019,2.49,null,null
+Pharmaceuticals,2020,2.51,2.49,0.02
+Pharmaceuticals,2021,4.30,2.51,1.79
+Pharmaceuticals,2022,3.25,4.30,-1.05
+Pharmaceuticals,2023,1.61,3.25,-1.64
+Pharmaceuticals,2024,2.11,1.61,0.50
+Pharmaceuticals,2025,3.09,2.11,0.98
+Pooled Investment Fund,2019,0.37,null,null
+Pooled Investment Fund,2020,0.26,0.37,-0.11
+Pooled Investment Fund,2021,0.27,0.26,0.01
+Pooled Investment Fund,2022,0.18,0.27,-0.09
+Pooled Investment Fund,2023,0.13,0.18,-0.05
+Pooled Investment Fund,2024,0.15,0.13,0.02
+Pooled Investment Fund,2025,0.23,0.15,0.08
+REITS and Finance,2019,0.13,null,null
+REITS and Finance,2020,0.13,0.13,0.00
+REITS and Finance,2021,0.13,0.13,0.00
+REITS and Finance,2022,0.13,0.13,0.00
+REITS and Finance,2023,0.13,0.13,0.00
+REITS and Finance,2024,0.13,0.13,0.00
+REITS and Finance,2025,0.13,0.13,0.00
+Residential,2019,1.08,null,null
+Residential,2020,1.00,1.08,-0.08
+Residential,2021,1.70,1.00,0.70
+Residential,2022,2.10,1.70,0.40
+Residential,2023,1.05,2.10,-1.05
+Residential,2024,0.82,1.05,-0.23
+Residential,2025,1.10,0.82,0.28
+Retailing,2019,0.54,null,null
+Retailing,2020,0.37,0.54,-0.17
+Retailing,2021,0.80,0.37,0.43
+Retailing,2022,0.60,0.80,-0.20
+Retailing,2023,0.81,0.60,0.21
+Retailing,2024,0.48,0.81,-0.33
+Retailing,2025,0.41,0.48,-0.07
