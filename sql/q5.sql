@@ -1,3 +1,7 @@
+-- Q5: Equity vs debt offering structure for operating companies, 2019-2025.
+-- Excludes Pooled Investment Funds (which are equity by structure) to isolate
+-- the financing choice signal from operating companies.
+-- 3-year rolling average smooths year-to-year noise in the debt percentage.
 WITH yearly_structure AS (
     SELECT
         s.filing_year,
@@ -7,7 +11,8 @@ WITH yearly_structure AS (
         SUM(CASE WHEN o.isequitytype = true AND o.isdebttype = true THEN 1 ELSE 0 END) AS both_deals
     FROM submissions s
     JOIN offerings o ON s.accession_number = o.accession_number
-    WHERE s.filing_year BETWEEN 2019 AND 2025 AND o.industrygrouptype != 'Pooled Investment Fund'
+    WHERE s.filing_year BETWEEN 2019 AND 2025
+      AND o.industrygrouptype != 'Pooled Investment Fund'
     GROUP BY s.filing_year
 ),
 with_percentages AS (

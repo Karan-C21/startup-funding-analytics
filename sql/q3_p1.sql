@@ -1,14 +1,18 @@
+-- Q3 (Part 1): State-level deal count growth ranking, 2019 vs 2025.
+-- Excludes Pooled Investment Funds to remove the Delaware incorporation artifact
+-- (funds incorporate in Delaware for legal reasons regardless of where they operate).
+-- Minimum threshold: states with fewer than 10 deals in 2019 are excluded.
 WITH state_yearly AS (
-    SELECT 
+    SELECT
         i.stateorcountrydescription,
         s.filing_year,
         COUNT(*) AS deal_count
-    FROM issuers i 
+    FROM issuers i
     JOIN submissions s ON i.accession_number = s.accession_number
     JOIN offerings o ON s.accession_number = o.accession_number
-    WHERE s.filing_year BETWEEN 2019 AND 2025 
-    AND i.stateorcountrydescription IS NOT NULL
-    AND o.industrygrouptype != 'Pooled Investment Fund'
+    WHERE s.filing_year BETWEEN 2019 AND 2025
+      AND i.stateorcountrydescription IS NOT NULL
+      AND o.industrygrouptype != 'Pooled Investment Fund'
     GROUP BY i.stateorcountrydescription, s.filing_year
 ),
 state_summary AS (

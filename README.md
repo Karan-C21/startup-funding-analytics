@@ -68,16 +68,16 @@ Among original Form D filings from operating companies (excluding pooled investm
 
 | Technique | Query |
 |---|---|
-| Multi-table joins (3 tables) | All queries |
+| Multi-table JOINs | All queries |
+| 3-table JOIN (issuers + submissions + offerings) | Q3 |
 | CTEs (chained) | Q1, Q2, Q3, Q4, Q5 |
-| LAG window function | Q2, Q3 |
-| RANK window function | Q3, Q5 |
+| LAG window function | Q2 |
+| RANK window function | Q3 |
 | NTILE | Q4 |
 | PERCENTILE_CONT | Q2 |
 | CASE WHEN inside aggregations | Q1, Q5 |
 | Rolling averages (ROWS BETWEEN) | Q5 |
-| NULLIF | Q3, Q5 |
-| Date arithmetic | Q2 |
+| NULLIF | Q3, Q4, Q5 |
 
 ## Repository Structure
 
@@ -92,6 +92,8 @@ startup-funding-analytics/
 │   ├── q3_p2.sql       -- Q3: year-by-year state trajectory
 │   ├── q4.sql          -- Q4: top decile capital share
 │   └── q5.sql          -- Q5: equity vs debt mix over time
+├── tableau-data/
+│   └── (query result CSVs exported for Tableau Public)
 ├── processed/
 │   └── (clean CSVs excluded from version control)
 ├── raw-data/

@@ -1,3 +1,6 @@
+-- Q4: Capital concentration - share of total capital raised by the top 10% of deals, by year.
+-- NTILE(10) partitioned per year assigns decile ranks within each year independently.
+-- Excludes $0 deals to avoid distorting the decile boundaries.
 WITH deal_deciles AS (
     SELECT
         s.filing_year,
@@ -9,7 +12,7 @@ WITH deal_deciles AS (
     FROM submissions s
     JOIN offerings o ON s.accession_number = o.accession_number
     WHERE s.filing_year BETWEEN 2019 AND 2025
-    AND o.totalamountsold > 0
+      AND o.totalamountsold > 0
 ),
 yearly_concentration AS (
     SELECT

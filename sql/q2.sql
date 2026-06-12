@@ -1,3 +1,6 @@
+-- Q2: Median deal size by industry per year, 2019-2025, with year-over-year change.
+-- Filters to industries averaging at least 200 deals/year to exclude thin markets.
+-- PERCENTILE_CONT requires ::NUMERIC cast before ROUND in PostgreSQL.
 WITH qualified_industries AS (
     SELECT o.industrygrouptype
     FROM submissions s
@@ -7,14 +10,14 @@ WITH qualified_industries AS (
     HAVING COUNT(*) / 7.0 >= 200
 ),
 median_by_industry AS (
-    SELECT 
+    SELECT
         o.industrygrouptype,
         s.filing_year,
         ROUND(PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY o.totalamountsold)::NUMERIC / 1000000, 2) AS median_deal_size_m
     FROM submissions s
     JOIN offerings o ON s.accession_number = o.accession_number
     WHERE s.filing_year BETWEEN 2019 AND 2025
-    AND o.industrygrouptype IN (SELECT industrygrouptype FROM qualified_industries)
+      AND o.industrygrouptype IN (SELECT industrygrouptype FROM qualified_industries)
     GROUP BY o.industrygrouptype, s.filing_year
 )
 SELECT
